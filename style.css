@@ -1,0 +1,147 @@
+body {
+  text-align: center;
+  position: absolute;
+  background-color: cadetblue;
+}
+
+img {
+  padding-top: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  border-radius: 10px;
+}
+
+h1 {
+  font-size: 6rem;
+  color: red;
+  text-shadow: 2px 2px #000000;
+  margin-top: 3rem;
+}
+
+h2 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 1.5rem;
+  text-shadow: 1px 1px #000000;
+  margin-top: 2rem;
+  padding-top: 10px;
+  padding-right: 20px;
+  padding-bottom: 30px;
+  padding-left: 40px;
+  text-align: left;
+}
+
+ul {
+  text-align: left;
+}
+
+a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.background {
+  position: relative;
+  background-color: cadetblue;
+}
+
+.background:before {
+  content: ' ';
+  display: block;
+  position: absolute;
+
+  /* background-image: url(images/frankenstein.jpeg); */
+  background-size: cover;
+  background-repeat: repeat;
+  background-position: center;
+  height: 100vh;
+  width: 100%;
+  opacity: 0.3;
+}
+
+.content {
+  position: relative;
+}
+
+.card {
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.4);
+  border-radius: 4px;
+  padding: 20px;
+  margin: 20px;
+  width: 300px;
+  height: 400px;
+  display: inline-block;
+  background-color: indianred;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  overflow: auto;
+}
+
+
+.card-text {
+  color: black;
+  font-size: 16px;
+}
+
+.card-img {
+  max-width: 100%;
+  width: 100px;
+  height: auto;
+  background-color: azure;
+}
+
+.bosco-image {
+  padding-top: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  margin-left: 40px;
+  border-radius: 10px;
+  /* box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); */
+  /* background-image: url(images/frankenstein.jpeg); */
+}
+
+.intro {
+  margin: 50px;
+  text-align: justify;
+  padding-top: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+}
+
+.features {
+  border-color: black;
+  border-width: 1px;
+  border-style: solid;
+  background-color:blueviolet;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 20% 80%;
+}
+
+#maincontent {
+  grid-column-start: 2;
+}
+
+#sidebar {
+  grid-column-start: 1;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+}

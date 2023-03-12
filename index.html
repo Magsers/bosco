@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Bosco</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="background">
+    <div class="content">
+      <h1>Bosco</h1>
+      <div class="container">
+        <div id="sidebar">
+          <img src="/images/bosco.jpeg" alt="Bosco" class="bosco-image">
+          <img src="/images/docker.png">
+          <img src="/images/aws.png" width="200vp">
+          <img src="/images/frankenstein.jpeg">
+          <img src="/images/dynamo.png" width="200vp">
+          <img src="/images/s3.png" width="200vp">
+          <img src="/images/cloudwatch.png" width="200vp">
+          <img src="/images/node.png" width="200vp">
+        </div>
+
+        <div id="maincontent">
+
+
+          <p class="intro">
+            Bosco is a feature based test runner that is intended to identify whether the components of a
+            system are
+            disfunctional or not and to report errors if so. It was built using Puppeteer, an automation tool
+            and Mocha, a testing framework. It is designed using an AWS state machine, using a step function which runs
+            a
+            Lambda function for each test or if required, an array of tests. It was deployed using a Docker image and
+            Cloud Formation. Screenshots of failed tests are stored in an S3 bucket and alerts are sent to a Slack
+            channel
+            to notify developers of any failed tests.</p><br>
+
+          <img src="images/bosco-diagram.png">
+
+          <div class="card">
+            <h2>Puppeteer</h2>
+            <img class="card-img" src="images/puppeteer.png">
+            <p class="card-text">Bosco was built using Puppeteer, an automation tool that is used for web scraping. It
+              replaced Testcafe which
+              was resource heavy and slow. </p>
+            <a href="https://pptr.dev/">Learn more</a>
+          </div>
+
+          <div class="card">
+            <h2>Lambda</h2>
+            <img class="card-img" src="images/lambda.png">
+            <p class="card-text">Bosco replaced Frankenstein which was run on two EC2 instances. The main issue with
+              Frankenstein was it did not scale, the company
+              did not have the ability to add more tests. Bosco is run via a step function state machine. Theoretically
+              it
+              is infinitely scalable. It is also billed per execution as opposed
+              to Frankenstein which ran every 20 minutes and was costly. </p>
+            <a href="https://docs.aws.amazon.com/lambda/latest/dg/welcome.html">Learn more</a>
+          </div>
+
+          <div class="card">
+            <h2>Mocha</h2>
+            <img class="card-img" src="images/mocha.svg">
+            <p class="card-text">Mocha was the chosen test framework for Bosco. It gathers all the tests in an array,
+              runs
+              the tests and reports the results. These results were accessible in
+              Dynamo DB and Cloudwatch. Screenshots are taken of failed tests and stored in S3. </p>
+            <a href="https://mochajs.org/">Learn more</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<footer class="footer">
+  Margaret McCarthy, Higher Diploma in Computer Science 2023, South East Technological University
+</footer>
+
+</html>
