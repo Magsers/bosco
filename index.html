@@ -9,11 +9,10 @@
     <header>
       <nav>
         <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Report</a></li>
-          <li><a href="#">Video</a></li>
-          <li><a href="#">Resources</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="report.html">Report</a></li>
+          <li><a href="video.html">Video</a></li>
+          <li><a href="resources.html">Resources</a></li>
         </ul>
       </nav>
     </header>
@@ -27,16 +26,20 @@
             <img src="/images/docker.png">
             <img src="/images/aws.png" width="200vp">
             <img src="/images/frankenstein.jpeg">
-            <img src="/images/dynamo.png" width="200vp">
+            <img src="/images/DynamoDB.png" width="200vp">
             <img src="/images/s3.png" width="150vp">
             <img src="/images/cloudwatch.png" width="150vp">
             <img src="/images/node.png" width="150vp">
           </div>
           <div id="maincontent">
+            <div style="float: left; margin-right: 10px;"><img src="images/step_function.png"></div>
             <p class="intro">
-              Bosco is a feature-based, serverless test runner that identifies whether the components of a chatbot are functional or not, and reports errors if so. It was built using Puppeteer, an automation tool, and Mocha, a testing framework. It is designed using an AWS Step Function state machine, which runs a Lambda function for each test, or if required, an array of tests. It is deployed in a Lambda container using a Docker image and CloudFormation. The latest results are stored in DynamoDB, with CloudWatch logs also being monitored. Screenshots of failed tests are stored in S3, and alerts are sent to Slack to notify developers of any failed tests.
-            </p><br>
-            <img src="images/step_function.png"><br>
+              Bosco is a feature-based, serverless test runner that identifies whether the components of a chatbot are functional or not, and reports errors if so. 
+              It was built using Puppeteer, an automation tool, and Mocha, a testing framework. It is designed using an AWS Step Function state machine, which runs a Lambda function for each test, or if required, an array of tests. </p>
+              <p>The application is deployed in a Docker container using a Docker image, and the infrastructure is managed and provisioned using AWS CloudFormation.
+              The latest results are stored in DynamoDB, with CloudWatch logs also being monitored. Screenshots of failed tests are stored in S3, and alerts are sent to Slack to notify developers of any failed tests.
+            </p>
+            <div class="card-container">
             <div class="card">
               <h2>Puppeteer</h2>
               <img class="card-img" src="images/puppeteer.png">
@@ -62,6 +65,13 @@
               <a href="https://mochajs.org/">Learn more</a>
             </div>
           </div>
+          </div>
         </div>
       </div>
     </div>
+    </body>
+
+    <footer>
+      &copy; 2023 Mags McCarthy | Student Number: 20095610 | Higher Diploma in Computer Science
+      Contact: 20095610@mail.wit.ie | South East Technological University
+    </footer>
