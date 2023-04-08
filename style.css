@@ -72,6 +72,18 @@ a {
   overflow: auto;
 }
 
+.linkcard {
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px;
+  width: 200px;
+  height: 300px;
+  display: inline-block;
+  background-color: white ;
+  overflow: auto;
+}
+
 .card-container {
   display: flex;
 }
@@ -89,13 +101,24 @@ a {
 }
 
 .bosco-image {
+  max-width: 80%;
+  max-height: 80%;
+  float: left;
+  margin-right: 20px; 
+  vertical-align: top;
+}
+
+
+.project {
+  max-width: 100%;
+  max-height: 100%;
   padding: 20px;
   margin-left: 40px;
   border-radius: 10px;
 }
 
 .intro {
-  margin: 50px;
+  margin: 30px;
   text-align: justify;
   padding: 20px;
 }
@@ -107,29 +130,28 @@ a {
   background-color: blueviolet;
 }
 
-.container {
+.grid-container {
   display: grid;
-  grid-template-columns: 1fr 2fr; 
-  grid-gap: 20px; 
-}
-
-.iframe {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  margin: 0 auto;
-  max-width: 800px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  gap: 20px;
 }
 
 #maincontent {
-  grid-column-start: 2;
-  grid-column-end: 3;
+  grid-column: 1 / 2;
 }
 
 #sidebar {
-  grid-column-start: 1;
-  grid-column-end: 2; 
+  grid-column: 2 / 3;
+  height: 100%;
+}
+
+.video {
+  display: block;
+  margin: 0 auto;
+  max-width: 800px;
+  justify-self: center;
+  align-self: flex-start; /* or align-self: 50px; */
 }
 
 header {
@@ -148,8 +170,6 @@ footer {
   text-align: center;
   padding: 10px;
 }
-
-
 
 nav ul {
   display: flex;

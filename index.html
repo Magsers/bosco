@@ -1,50 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <title>Bosco</title>
-    <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-    <header>
-      <nav>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="report.html">Report</a></li>
-          <li><a href="video.html">Video</a></li>
-          <li><a href="resources.html">Resources</a></li>
-        </ul>
-      </nav>
-    </header>
-    <div class="background">
-      <div class="content">
-        <h1>Bosco</h1>
-        <h2>Optimising Test Runner Performance through Serverless Computing</h2>
-        <div class="container">
-          <div id="sidebar">
-            <img src="/images/bosco.jpeg" alt="Bosco" class="bosco-image">
-            <img src="/images/docker.png">
-            <img src="/images/aws.png" width="200vp">
-            <img src="/images/frankenstein.jpeg">
-            <img src="/images/DynamoDB.png" width="200vp">
-            <img src="/images/s3.png" width="150vp">
-            <img src="/images/cloudwatch.png" width="150vp">
-            <img src="/images/node.png" width="150vp">
-          </div>
-          <div id="maincontent">
-            <div style="float: left; margin-right: 10px;"><img src="images/step_function.png"></div>
-            <p class="intro">
-              Bosco is a feature-based, serverless test runner that identifies whether the components of a chatbot are functional or not, and reports errors if so. 
-              It was built using Puppeteer, an automation tool, and Mocha, a testing framework. It is designed using an AWS Step Function state machine, which runs a Lambda function for each test, or if required, an array of tests. </p>
-              <p>The application is deployed in a Docker container using a Docker image, and the infrastructure is managed and provisioned using AWS CloudFormation.
-              The latest results are stored in DynamoDB, with CloudWatch logs also being monitored. Screenshots of failed tests are stored in S3, and alerts are sent to Slack to notify developers of any failed tests.
+
+<head>
+  <meta charset="UTF-8">
+  <title>Bosco</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="report.html">Report</a></li>
+        <li><a href="video.html">Video</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <div class="background">
+    <div class="content">
+
+      <div class="grid-container">
+        <div id="maincontent">
+          <h1>Bosco</h1>
+          <h2>Optimising Test Runner Performance for Chatbot Technology</h2>
+          <img src="/images/Bosco.png" alt="bosco_project" class="project">
+        </div>
+        <div id="sidebar">
+          <img src="/images/bosco.jpeg" alt="Bosco" class="bosco-image">
+         
+          <div class="intro">
+            <p>
+              Bosco is a feature-based, serverless test runner that identifies whether the components of a chatbot are
+              functional or not, and reports errors if so.
+              It was built using Puppeteer, an automation tool, and Mocha, a testing framework. It is designed using an
+              AWS Step Function state machine, which runs a Lambda function for each test, or if required, an array of
+              tests. </p>
+            <p>The application is deployed in a Docker container using a Docker image, and the infrastructure is managed
+              and provisioned using AWS CloudFormation.
+              The latest results are stored in DynamoDB, with CloudWatch logs also being monitored. Screenshots of
+              failed tests are stored in S3, and alerts are sent to Slack to notify developers of any failed tests.
             </p>
-            <div class="card-container">
+          </div>
+          <div class="card-container">
             <div class="card">
               <h2>Puppeteer</h2>
               <img class="card-img" src="images/puppeteer.png">
               <p class="card-text">
-                Bosco was built using Puppeteer, an automation tool that is used for web scraping. It replaced Testcafe, which was resource-heavy and slow.
+                Bosco was built using Puppeteer, an automation tool that is used for web scraping. It replaced Testcafe,
+                which was resource-heavy and slow.
               </p>
               <a href="https://pptr.dev/">Learn more</a>
             </div>
@@ -52,7 +57,10 @@
               <h2>Lambda</h2>
               <img class="card-img" src="images/lambda.png">
               <p class="card-text">
-                Bosco will replace Frankenstein, the current test runner, which is run on two EC2 instances. The main issue with Frankenstein was it does not scale and more tests cannot be added to it . Bosco is run via a Step Function state machine. Theoretically, it is infinitely scalable. It is also billed per execution as opposed to Frankenstein, which ran every 20 minutes and was costly.
+                Bosco will replace Frankenstein, the current test runner, which is run on two EC2 instances. The main
+                issue with Frankenstein was it does not scale and more tests cannot be added to it . Bosco is run via a
+                Step Function state machine. Theoretically, it is infinitely scalable. It is also billed per execution
+                as opposed to Frankenstein, which ran every 20 minutes and was costly.
               </p>
               <a href="https://docs.aws.amazon.com/lambda/latest/dg/welcome.html">Learn more</a>
             </div>
@@ -60,18 +68,20 @@
               <h2>Mocha</h2>
               <img class="card-img" src="images/mocha.svg">
               <p class="card-text">
-                Mocha was the chosen test framework for Bosco. It gathers all the tests in an array, runs the tests, and reports the results to Cloudwatch. The latest results are stored in DynamoDB. Screenshots are taken of failed tests and stored in S3.
+                Mocha was the chosen test framework for Bosco. It gathers all the tests in an array, runs the tests, and
+                reports the results to Cloudwatch. The latest results are stored in DynamoDB. Screenshots are taken of
+                failed tests and stored in S3.
               </p>
               <a href="https://mochajs.org/">Learn more</a>
             </div>
           </div>
-          </div>
         </div>
       </div>
     </div>
-    </body>
+  </div>
+</body>
 
-    <footer>
-      &copy; 2023 Mags McCarthy | Student Number: 20095610 | Higher Diploma in Computer Science
-      Contact: 20095610@mail.wit.ie | South East Technological University
-    </footer>
+<footer>
+  &copy; 2023 Mags McCarthy | Student Number: 20095610 | Higher Diploma in Computer Science
+  Contact: 20095610@mail.wit.ie | South East Technological University
+</footer>
