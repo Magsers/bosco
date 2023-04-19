@@ -32,15 +32,15 @@
          
           <div class="intro">
             <p>
-              Bosco is a feature-based, serverless test runner that identifies whether the components of a chatbot are
-              functional or not, and reports errors if so.
-              It was built using Puppeteer, an automation tool, and Mocha, a testing framework. It is designed using an
-              AWS Step Function state machine, which runs a Lambda function for each test, or if required, an array of
+              Bosco was built for ServisBOT, an artificial intelligence chatbot technology company based in Waterford. 
+              It is a feature-based, serverless test runner that runs end to end tests and identifies whether the components of a chatbot are
+              functional or not. It was built using Puppeteer, an automation tool and Mocha, a testing framework. It is designed using an
+              AWS Step Function, state machine, which runs a Lambda function for each test, or if required, an array of
               tests. </p>
-            <p>The application is deployed in a Docker container using a Docker image, and the infrastructure is managed
+            <p>The application is deployed in a Docker container with the infrastructure being managed
               and provisioned using AWS CloudFormation.
-              The latest results are stored in DynamoDB, with CloudWatch logs also being monitored. Screenshots of
-              failed tests are stored in S3, and alerts are sent to Slack to notify developers of any failed tests.
+              The latest results are stored in DynamoDB and reported to CloudWatch. Screenshots of
+              failed tests are stored in an S3 bucket with alerts sent to a Slack channel to notify the team of any failed tests.
             </p>
           </div>
           <div class="card-container">
@@ -49,7 +49,7 @@
               <img class="card-img" src="images/puppeteer.png">
               <p class="card-text">
                 Bosco was built using Puppeteer, an automation tool that is used for web scraping. It replaced Testcafe,
-                which was resource-heavy and slow.
+                which was proven to be resource-heavy and slow.
               </p>
               <a href="https://pptr.dev/">Learn more</a>
             </div>
@@ -57,10 +57,10 @@
               <h2>Lambda</h2>
               <img class="card-img" src="images/lambda.png">
               <p class="card-text">
-                Bosco will replace Frankenstein, the current test runner, which is run on two EC2 instances. The main
-                issue with Frankenstein was it does not scale and more tests cannot be added to it . Bosco is run via a
-                Step Function state machine. Theoretically, it is infinitely scalable. It is also billed per execution
-                as opposed to Frankenstein, which ran every 20 minutes and was costly.
+                Bosco will replace Frankenstein, the current test runner, which is run on EC2 instances. The main
+                issue with Frankenstein is it does not scale and more tests cannot be added to it . Bosco is run via a
+                lambda step function state machine. Theoretically, it is infinitely scalable. The tests will run in parallel on individual lambda functions as 
+                opposed to Frankenstein where all the tests are run in one instance and are competing for memory.
               </p>
               <a href="https://docs.aws.amazon.com/lambda/latest/dg/welcome.html">Learn more</a>
             </div>
