@@ -29,18 +29,21 @@
         </div>
         <div id="sidebar">
           <img src="/images/bosco.jpeg" alt="Bosco" class="bosco-image">
-         
+
           <div class="intro">
             <p>
-              Bosco was built for ServisBOT, an artificial intelligence chatbot technology company based in Waterford. 
-              It is a feature-based, serverless test runner that runs end to end tests and identifies whether the components of a chatbot are
-              functional or not. It was built using Puppeteer, an automation tool and Mocha, a testing framework. It is designed using an
+              Bosco was built for ServisBOT, an artificial intelligence chatbot technology company based in Waterford.
+              It is a feature-based, serverless test runner that runs end to end tests and identifies whether the
+              components of a chatbot are
+              functional or not. It was built using Puppeteer, an automation tool and Mocha, a testing framework. It is
+              designed using an
               AWS Step Function, state machine, which runs a Lambda function for each test, or if required, an array of
               tests. </p>
             <p>The application is deployed in a Docker container with the infrastructure being managed
               and provisioned using AWS CloudFormation.
               The latest results are stored in DynamoDB and reported to CloudWatch. Screenshots of
-              failed tests are stored in an S3 bucket with alerts sent to a Slack channel to notify the team of any failed tests.
+              failed tests are stored in an S3 bucket with alerts sent to a Slack channel to notify the team of any
+              failed tests.
             </p>
           </div>
           <div class="card-container">
@@ -58,8 +61,10 @@
               <img class="card-img" src="images/lambda.png">
               <p class="card-text">
                 Bosco will replace Frankenstein, the current test runner, which is run on EC2 instances. The main
-                issue with Frankenstein is it does not scale and more tests cannot be added to it . Bosco is run via a
-                lambda step function state machine. Theoretically, it is infinitely scalable. The tests will run in parallel on individual lambda functions as 
+                issue with Frankenstein is it does not scale and tests cannot be added without incurring significant
+                costs . Bosco is run via a
+                lambda step function state machine. Theoretically, it is infinitely scalable. The tests will run in
+                parallel on individual lambda functions as
                 opposed to Frankenstein where all the tests are run in one instance and are competing for memory.
               </p>
               <a href="https://docs.aws.amazon.com/lambda/latest/dg/welcome.html">Learn more</a>
@@ -68,8 +73,10 @@
               <h2>Mocha</h2>
               <img class="card-img" src="images/mocha.svg">
               <p class="card-text">
-                Mocha was the chosen test framework for Bosco. It gathers all the tests in an array, runs the tests, and
-                reports the results to Cloudwatch. The latest results are stored in DynamoDB. Screenshots are taken of
+                Mocha was the chosen test framework for Bosco. Bosco uses Mocha to gather all the tests in an array,
+                runs the tests, and
+                report the results to Cloudwatch. The latest results are stored in DynamoDB with historical results
+                stored in Elastic Search. Screenshots are taken of
                 failed tests and stored in S3.
               </p>
               <a href="https://mochajs.org/">Learn more</a>
