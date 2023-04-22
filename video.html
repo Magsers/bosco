@@ -27,18 +27,42 @@
 
           <div class="heading-wrapper">
             <div class="project-heading">Video Presentation</div>
-            </div>
+          </div>
           <div class="video">
             <iframe width="560" height="315" src="https://www.youtube.com/embed/_EDCyz1SpI8" frameborder="0"
               allow="autoplay; encrypted-media" allowfullscreen></iframe>
           </div>
-         
+
         </div>
         <div id="sidebar">
-
-          <img src="/images/boscocomplete.png" alt="bosco_project" class="project" style="width:50%;">
+        <p>This is a video presentation of Bosco that provides an overview of all the key features of Bosco. It is designed to give viewers a comprehensive understanding of the capabilities of Bosco. </p>
+        <p>Click on the thumbnail image below to view the complete workflow of Bosco at the time of finalising this project.</p>
+        <img src="/images/boscocomplete.png" alt="bosco_project" class="thumbnail-img">
           <div class="project-title">Bosco Complete Workflow</div>
-        </div>        
+          <script>
+            // Get the modal overlay and the modal image
+            var modal = document.createElement("div");
+            modal.classList.add("modal");
+            document.body.appendChild(modal);
+
+            var modalContent = document.createElement("img");
+            modalContent.classList.add("modal-img");
+            modal.appendChild(modalContent);
+
+            // Get the thumbnail image and add a click event listener
+            var thumbnail = document.querySelector(".thumbnail-img");
+            thumbnail.addEventListener("click", function () {
+              modal.style.display = "flex";
+              modalContent.src = this.src.replace("/thumbnail/", "/");
+            });
+
+            // Hide the modal overlay when clicked
+            modal.addEventListener("click", function () {
+              modal.style.display = "none";
+            });
+
+          </script>
+        </div>
       </div>
     </div>
   </div>

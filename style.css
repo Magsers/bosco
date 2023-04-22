@@ -29,7 +29,7 @@ h2 {
 }
 
 .project-heading {
-  font-size: 32px;
+  font-size: 48px;
   font-weight: bold;
   text-align: center;
   margin-bottom: 10px;
@@ -37,7 +37,7 @@ h2 {
 }
 
 .generated-heading {
-  font-size: 3rem;
+  font-size: 32px;
   font-style: italic;
   color: #333333;
   margin-bottom: 10px;
@@ -237,4 +237,36 @@ nav a {
 
 nav a:hover {
   color: #ffcd00;
+}
+
+/* Hide the modal overlay by default */
+.modal {
+  display: none;
+}
+
+/* Style the thumbnail image */
+.thumbnail-img {
+  width: 200px;
+  height: 150px;
+  cursor: pointer;
+}
+
+/* Style the modal overlay */
+.modal-content {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Style the modal image */
+.modal-img {
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain;
 }
